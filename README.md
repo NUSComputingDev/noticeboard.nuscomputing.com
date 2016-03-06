@@ -2,9 +2,13 @@
 
 __Updating The Page__
 1. Prepare three posters to be shown
+
 2. Under the "Posters Grid Section" (code shows section id="#portfolio"), update the three posters' url
+
 3. Each poster has a corresponding #posterModal-x where x ranges from 1 to 3
+
 4. Under the "Postal Modal Section", update the poster url again for the corresponding poster above
+
 5. You are now done
 
 ------------------------
