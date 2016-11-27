@@ -2,14 +2,21 @@
 
 __Updating The Page__
 
-1. Prepare three posters to be shown
-2. Under the "Posters Grid Section" (code shows section id="#portfolio"), update the three posters' url
-3. Each poster has a corresponding #posterModal-x where x ranges from 1 to 3
-4. Under the "Poster Modal Section", update the poster url again for the corresponding poster above
-5. You are now done
+1. Prepare three posters to be shown.
+2. Upload the posters to either an online image hosting service or to the `img/portfolio` folder in this repository.
+3. References for the posters should be something along the lines of either `img/portfolio/extensioncord.jpg` or `http://i.imgur.com/nphAPzG.png`.
+4. Go to `index.html` and update the references in Line 11 to 18 to your new posters. Please adhere to the syntax of the referencing (i.e. encapsulate the poster reference in quotation marks and end the statement with a semicolon).
+5. Refer to the screenshots below for the mapping between the references and the actual appearance of the noticeboard.
+6. Contact IT Cell to pull the changes in this repository to the server.
+
+![index.html](img/noticeboard.nuscomputing.index.PNG)
+Lines 11 to 18 of `index.html`
+
+![noticeboard.nuscomputing.com](img/noticeboard.nuscomputing.PNG)
+Reference map between the variables in `index.html` and the expected appearance of `noticeboard.nuscomputing.com`.
+
 
 ------------------------
-
 
 
 # [Start Bootstrap](http://startbootstrap.com/) - [Agency](http://startbootstrap.com/template-overviews/agency/)
