@@ -1,4 +1,4 @@
-# [NUS Computing Noticeboard Website] (http://noticeboard.nuscomputing.com/)
+# [NUS Computing Noticeboard Website](http://noticeboard.nuscomputing.com/)
 
 __Updating The Page__
 
