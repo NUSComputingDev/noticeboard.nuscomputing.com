@@ -1,259 +1,314 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Noticeboard &mid; NUS Computing</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
+        <script>
+            /*
+             * common image references:
+             * img/boardgames.jpg
+             * img/extensioncord.jpg
+             */
+            var leftImage = "img/boardgames.jpg";
+            var leftCaption = "Board Games for Loan";
 
-    <script>
-        // common image references:
-        // img/portfolio/boardgames.jpg
-        // img/portfolio/extensioncord.jpg
+            var centerImage = "img/ay1718-sportscamp.jpg";
+            var centerCaption = "SoC Sports Camp 2018 - Camp Salvos";
 
-        var leftImage = "img/portfolio/boardgames.jpg";
-        var leftTitle = "Board Games for Loan";
+            var rightImage = "img/extensioncord.jpg";
+            var rightCaption = "Extension Cords for Loan";
+        </script>
 
-        var middleImage = "img/portfolio/ay1718-sportscamp.jpg";
-        var middleTitle = "SoC Sports Camp 2018 - Camp Salvos";
 
-        var rightImage = "img/portfolio/extensioncord.jpg";
-        var rightTitle = "Extension Cords for Loan";
+        <style type="text/css">
+            @font-face {
+                font-family: 'noticeboard-icons';
+                src: url('./fonts/noticeboard-icons.eot?26656092');
+                src: url('./fonts/noticeboard-icons.eot?26656092#iefix') format('embedded-opentype'),
+                    url('./fonts/noticeboard-icons.woff?26656092') format('woff'),
+                    url('./fonts/noticeboard-icons.ttf?26656092') format('truetype'),
+                    url('./fonts/noticeboard-icons.svg?26656092#noticeboard-icons') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
 
-    </script>
+            body {
+                background-image: url(img/bg.jpg);
+                background-repeat: none;
+                background-attachment: scroll;
+                background-position: top center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                background-size: cover;
+                -o-background-size: cover;
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin: 0;
+            }
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+            a {
+                text-decoration: none;
+            }
 
-    <title>Noticeboard | NUS Computing</title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+            .flex {
+                display: flex;
+                justify-content: space-between;
+                width: 70%;
+                margin: auto auto;
+            }
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+            .poster-container {
+                width: 30%;
+                background-color: white;
+                padding: 5px;
+            }
 
-    <!-- Custom CSS -->
-    <link href="css/agency.css" rel="stylesheet">
+            .poster-caption {
+                padding: 25px;
+                font-weight: bold;
+            }
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet" type="text/css">
+            .poster-container img {
+                max-width:100%;
+                max-height:100%;
+            }
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	<style>
-		.navbar-default .navbar-brand {
-			color: #011640;
-			font-family: 'Open Sans Condensed', "Helvetica Neue", Helvetica, Arial, cursive;
-		}
+            footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                padding: 25px 0;
+                background-color: white;
+                width: 100%;
+                z-index: -9999;
+            }
 
-		.navbar-default .navbar-brand:hover,
-		.navbar-default .navbar-brand:focus,
-		.navbar-default .navbar-brand:active,
-		.navbar-default .navbar-brand.active {
-			color: #011640;
-		}
+            footer .flex div {
+                flex-grow: 1;
+                max-width: 33.3333%;
+            }
 
-		.bg-splash {
-			background-image: url(img/header-bg4.jpg);
-			background-repeat: none;
-			background-attachment: scroll;
-			background-position: center center;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			background-size: cover;
-			-o-background-size: cover;
-			text-align: center;
-		}
+            footer > .flex > div:first-child {
+                text-align: left;
+            }
 
-		.row-eq-height {
-			display: -webkit-box;
-			display: -webkit-flex;
-			display: -ms-flexbox;
-			display: flex;
-		}
+            footer > .flex > div:last-child {
+                text-align: right;
+            }
 
-		.pi-border {
-			border: solid 2px white;
-		}
-		
-		ul.social-buttons li a {
-			background-color: grey;
-		}
+            .social-media {
+                font-family: 'noticeboard-icons';
+                font-size: 14px;
+            }
 
-		footer {
-			background-color: white;
-		}
+            .icon {
+                display: inline-block;
+                background-color: #222;
+                height: 40px;
+                width: 40px;
+                border-radius: 100%;
+                font-size: 20px;
+                line-height: 40px;
+                color: #fff;
+                outline: 0;
+            }
 
-		#portfolio {
-			padding-top: 80px;
-			padding-bottom: 150px;
-		}
-	</style>
+            .icon.icon-facebook:before {
+                content: 'F';
+            }
 
-</head>
+            .icon.icon-instagram:before {
+                content: 'I';
+            }
 
-<body id="page-top" class="index">
+            .icon.icon-link:before {
+                content: 'L';
+            }
 
-    <!-- Posters Grid Section -->
-    <section id="portfolio" class="bg-splash">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Computing Club Events</h2>
-					<h3><br></h3>
-                </div>
-            </div>
-            <div class="row row-eq-height">
+            .lightbox-target {
+                position: fixed;
+                top: -100%;
+                width: 100%;
+                background: rgba(0,0,0,.7);
+                width: 100%;
+                opacity: 0;
+                -webkit-transition: opacity .5s ease-in-out;
+                -moz-transition: opacity .5s ease-in-out;
+                -o-transition: opacity .5s ease-in-out;
+                transition: opacity .5s ease-in-out;
+                overflow: hidden;
+            }
 
-                <div class="col-md-4 portfolio-item">
-					<a href="#posterModal-1" class="portfolio-link" data-toggle="modal">
-						<img src="" class="img-responsive pi-border left" alt="">
-					</a>
-                    <div class="portfolio-caption">
-                        <h4 id="left"></h4>
+            .lightbox-target img {
+                margin: auto;
+                position: absolute;
+                top: 0;
+                left:0;
+                right:0;
+                bottom: 0;
+                max-height: 0%;
+                max-width: 0%;
+                border: 3px solid white;
+                box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+                box-sizing: border-box;
+                -webkit-transition: .5s ease-in-out;
+                -moz-transition: .5s ease-in-out;
+                -o-transition: .5s ease-in-out;
+                transition: .5s ease-in-out;
+            }
+
+            a.lightbox-close {
+                display: block;
+                width:50px;
+                height:50px;
+                box-sizing: border-box;
+                background: white;
+                color: black;
+                text-decoration: none;
+                position: absolute;
+                top: -80px;
+                right: 0;
+                -webkit-transition: .5s ease-in-out;
+                -moz-transition: .5s ease-in-out;
+                -o-transition: .5s ease-in-out;
+                transition: .5s ease-in-out;
+            }
+
+            a.lightbox-close:before {
+                content: "";
+                display: block;
+                height: 30px;
+                width: 1px;
+                background: black;
+                position: absolute;
+                left: 26px;
+                top:10px;
+                -webkit-transform:rotate(45deg);
+                -moz-transform:rotate(45deg);
+                -o-transform:rotate(45deg);
+                transform:rotate(45deg);
+            }
+
+            a.lightbox-close:after {
+                content: "";
+                display: block;
+                height: 30px;
+                width: 1px;
+                background: black;
+                position: absolute;
+                left: 26px;
+                top:10px;
+                -webkit-transform:rotate(-45deg);
+                -moz-transform:rotate(-45deg);
+                -o-transform:rotate(-45deg);
+                transform:rotate(-45deg);
+            }
+
+            .lightbox-target:target {
+                opacity: 1;
+                top: 0;
+                bottom: 0;
+            }
+
+            .lightbox-target:target img {
+                max-height: 100%;
+                max-width: 100%;
+            }
+
+            .lightbox-target:target a.lightbox-close {
+                top: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <h1>Computing Club Events</h1>
+
+        <div class="flex" style="align-items: stretch">
+                <div class="poster-container">
+                    <a href="#left-modal" class="portfolio-link" data-toggle="modal">
+                        <img id="left-img" src="">
+                    </a>
+                    <div id="left-caption" class="poster-caption">
+
                     </div>
                 </div>
 
-                <div class="col-md-4 portfolio-item">
-					<a href="#posterModal-2" class="portfolio-link" data-toggle="modal">
-						<img src="" class="img-responsive pi-border middle" alt="">
-					</a>
-                    <div class="portfolio-caption">
-                        <h4 id="middle"></h4>
+                <div class="poster-container">
+                    <a href="#center-modal" class="portfolio-link" data-toggle="modal">
+                        <img id="center-img" src="">
+                    </a>
+                    <div id="center-caption" class="poster-caption">
                     </div>
                 </div>
 
-                <div class="col-md-4 portfolio-item">
-					<a href="#posterModal-3" class="portfolio-link" data-toggle="modal">
-						<img src="" class="img-responsive pi-border right" alt="">
-					</a>
-                    <div class="portfolio-caption">
-                        <h4 id="right"></h4>
+                <div class="poster-container">
+                    <a href="#right-modal" class="portfolio-link" data-toggle="modal">
+                        <img id="right-img" src="">
+                    </a>
+                    <div id="right-caption" class="poster-caption">
                     </div>
                 </div>
-
-            </div>
         </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; NUS Students' Computing Club</span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="https://www.instagram.com/nuscomputingclub/"><i class="fa fa-instagram"></i></a>
-                        </li>
-                        <li><a href="https://www.facebook.com/nuscomputing/"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="http://nuscomputing.com/"><i class="fa fa-link"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="mailto:connect@nuscomputing.com">connect@nuscomputing.com</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="lightbox-target" id="left-modal">
+            <a href="#">
+                <img id="left-modal-img" src=""/>
+                <a class="lightbox-close" href="#"></a>
+            </a>
         </div>
-    </footer>
 
-    <!-- Poster Modal Section -->
-
-    <!-- Poster Modal 1 -->
-    <div class="portfolio-modal modal fade" id="posterModal-1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <!-- Poster Details Go Here -->
-                            <img class="img-responsive img-centered left" src="" alt="">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="lightbox-target" id="center-modal">
+            <a href="#">
+                <img id="center-modal-img" src=""/>
+                <a class="lightbox-close" href="#"></a>
+            </a>
         </div>
-    </div>
 
-    <!-- Poster Modal 2 -->
-    <div class="portfolio-modal modal fade" id="posterModal-2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <!-- Poster Details Go Here -->
-                            <img class="img-responsive img-centered middle" src="" alt="">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="lightbox-target" id="right-modal">
+            <a href="#">
+                <img id="right-modal-img" src=""/>
+                <a class="lightbox-close" href="#"></a>
+            </a>
         </div>
-    </div>
 
-    <!-- Poster Modal 3 -->
-    <div class="portfolio-modal modal fade" id="posterModal-3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
+        <footer>
+            <div class="flex">
+                <div>&copy; NUS Students' Computing Club </div>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/nuscomputingclub/">
+                        <span class="icon icon-instagram"></span>
+                    </a>
+                    <a href="https://www.facebook.com/nuscomputing/">
+                        <span class="icon icon-facebook"></span>
+                    </a>
+                    <a href="http://nuscomputing.com/">
+                        <span class="icon icon-link"></span>
+                    </a>
                 </div>
+                <div><a href="mailto:connect@nuscomputing.com">connect@nuscomputing.com</a></div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <!-- Poster Details Go Here -->
-                            <img class="img-responsive img-centered right" src="" alt="">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        </footer>
 
+        <script>
+            document.getElementById('left-img').src = leftImage;
+            document.getElementById('center-img').src = centerImage;
+            document.getElementById('right-img').src = rightImage;
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+            document.getElementById('left-modal-img').src = leftImage;
+            document.getElementById('center-modal-img').src = centerImage;
+            document.getElementById('right-modal-img').src = rightImage;
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <script>
-        $('.left').attr("src", leftImage);
-        $('.middle').attr("src", middleImage);
-        $('.right').attr("src", rightImage);
-
-        $('#left').text(leftTitle);
-        $('#middle').text(middleTitle);
-        $('#right').text(rightTitle);
-    </script>
-
-</body>
-
+            document.getElementById('left-caption').innerHTML = leftCaption;
+            document.getElementById('center-caption').innerHTML = centerCaption;
+            document.getElementById('right-caption').innerHTML = rightCaption;
+        </script>
+    </body>
 </html>
